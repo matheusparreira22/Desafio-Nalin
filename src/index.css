@@ -19,9 +19,15 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
+#submit:hover{
+  background-color: red;
+  color: white;
+  box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
 #login-page {
   min-height: 100vh;
   display: flex;
@@ -104,6 +110,7 @@ input {
   box-shadow: 1px 5px 5px rgb(160, 77, 77);
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(-10deg) rotateY(-15deg);
+  background-color: brown;
 }
 .lista p {
   color: rgb(238, 238, 238);

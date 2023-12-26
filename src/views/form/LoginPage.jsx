@@ -17,7 +17,7 @@ export default function LoginPage() {
     if (data.status == 200) {
       navigate("/produtos")
     } else {
-      setError(!error)
+      setError(true)
     }
   }
   const clickError = () => {
@@ -39,10 +39,10 @@ export default function LoginPage() {
             )}
             <label>Loguin</label>
             <input {...register("login")} />
-            <label>Password</label>
+            <label>Senha</label>
             <input {...register("password")} />
             <div>
-              <input type="submit" value="Entrar" />
+              <input id="submit" type="submit" value="Entrar" />
             </div>
           </form>
         </div>
