@@ -39,7 +39,7 @@ function checkToken() {
 const NoToken = function () {
   if (!checkToken()) return <LoginPage />
 
-  return <Navigate to="/products" />
+  return <Navigate to="/produtos" />
 }
 
 export const router = createBrowserRouter([
@@ -52,8 +52,12 @@ export const router = createBrowserRouter([
     element: <NoToken />
   },
   {
-    path: "/products",
+    path: "/produtos",
     element: <TokenFunctionProducts />
+  },
+  {
+    path: "/*",
+    element: <Navigate to={"/"}/>
   }
 ])
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import userService from "../services/userGet"
 import OutherList from "../components/OutherList"
 import { useNavigate } from "react-router-dom"
-import { IoPerson } from "react-icons/io5";
+import { IoPerson } from "react-icons/io5"
 
 export default function Products() {
   const navigate = useNavigate()
@@ -55,7 +55,7 @@ export default function Products() {
           onClick={logOut}
         >
           Sair
-          <IoPerson/>
+          <IoPerson />
         </button>
 
         <h1 style={{ textAlign: "center" }}>Lista de produtos</h1>
@@ -81,7 +81,7 @@ export default function Products() {
           </select>
         </div>
       </div>
-
+      <div style={{minHeigh: '100%', backgroundColor: 'black'}}>
       <div id="container-list">
         {filterProduct != ""
           ? filterProduct.map((item, index) => (
@@ -91,6 +91,8 @@ export default function Products() {
               <OutherList item={item} index={index} key={index} />
             ))}
       </div>
+      </div>
+      
     </div>
   )
 }

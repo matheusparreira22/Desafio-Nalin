@@ -7,11 +7,7 @@ import { useState } from "react"
 export default function LoginPage() {
   const navigate = useNavigate()
   const [error, setError] = useState(false)
-  const user = sessionStorage.getItem("token-nalin")
 
-  if (user) {
-    navigate("/products")
-  }
   const { register, handleSubmit } = useForm({
     login: "",
     password: ""
@@ -19,13 +15,13 @@ export default function LoginPage() {
   const onSubmit = async (user) => {
     const data = await userService.getUser(user.login, user.password)
     if (data.status == 200) {
-      navigate("/products")
+      navigate("/produtos")
     } else {
       setError(!error)
     }
   }
   const clickError = () => {
-    console.log("error")
+    setError(!Error)
   }
 
   return (
